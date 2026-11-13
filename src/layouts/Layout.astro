@@ -18,6 +18,8 @@ const schema = {
   url: new URL(url('/'), Astro.site).href,
   areaServed: { '@type': 'City', name: 'Charlotte, NC' },
   address: { '@type': 'PostalAddress', addressLocality: site.city, addressRegion: site.state, addressCountry: 'US' },
+  email: site.email,
+  founder: { '@type': 'Person', name: site.owner },
   openingHours: 'Mo-Su 00:00-23:59',
 };
 ---

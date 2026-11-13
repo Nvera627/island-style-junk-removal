@@ -143,6 +143,7 @@ p { margin: 0; }
 
 /* Footer */
 .site-footer { color: #5b6166; padding: 28px 24px 32px; font-size: 14px; }
+.site-footer a { color: #5b6166; }
 .site-footer .inner { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
 
 @media (max-width: 720px) {

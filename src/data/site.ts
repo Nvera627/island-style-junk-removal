@@ -7,7 +7,8 @@ export const site = {
   phoneShort: '[PHONE]',
   // Digits only, used for tel: and sms: links. Replace when Duane approves.
   phoneDigits: '0000000000',
-  email: '[EMAIL]',
+  email: 'islandstlzcleaning@gmail.com',
+  owner: 'Duane Douglas',
   hours: 'Call anytime',
   city: 'Charlotte',
   state: 'NC',
