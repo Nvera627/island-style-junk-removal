@@ -3,10 +3,10 @@ export const site = {
   name: 'Island Style Junk Removal',
   shortName: 'Island Style',
   tagline: "If we can move it, we'll haul it.",
-  phone: '[PHONE NUMBER]',
-  phoneShort: '[PHONE]',
-  // Digits only, used for tel: and sms: links. Replace when Duane approves.
-  phoneDigits: '0000000000',
+  phone: '(704) 277-8754',
+  phoneShort: '(704) 277-8754',
+  // Digits only, used for tel: and sms: links.
+  phoneDigits: '7042778754',
   email: 'islandstlzcleaning@gmail.com',
   owner: 'Duane Douglas',
   hours: 'Calls 7am to 7pm',
