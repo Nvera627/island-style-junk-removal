@@ -13,6 +13,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
 body { margin: 0; font-family: var(--font-body); color: var(--ink); background: var(--bg); line-height: 1.5; }
 img { max-width: 100%; display: block; }
 a { color: var(--green); }
