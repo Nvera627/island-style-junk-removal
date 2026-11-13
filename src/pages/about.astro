@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import QuotePanel from '../components/QuotePanel.astro';
+import duane from '../assets/images/about-duane-placeholder.svg';
+---
+<Layout title="About" description="Meet Duane, the owner of Island Style Junk Removal. From Jamaica to Charlotte, helping people stay junk free.">
+  <section class="page-intro">
+    <div class="wrap">
+      <span class="eyebrow">About Island Style</span>
+      <h1>From Jamaica <span>to Charlotte</span></h1>
+    </div>
+  </section>
+
+  <section class="section-flush">
+    <div class="wrap about">
+      <div class="about-photo">
+        <img src={duane.src} width="760" height="760" alt="Placeholder photo of Duane with the truck" />
+      </div>
+      <div class="about-text prose">
+        <p>I'm Duane, and I'm from Jamaica. I started Island Style Junk Removal to help people in the Charlotte area stay junk free.</p>
+        <p>Every job gets the same care, whether it's one old couch or a full garage. We show up, we work hard, and we leave your space clean.</p>
+        <p>Island Style is a new, locally owned business. You will talk to me, and I will give you a straight answer and a fair quote.</p>
+      </div>
+    </div>
+  </section>
+
+  <QuotePanel />
+</Layout>

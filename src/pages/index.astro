@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ServiceIcon from '../components/ServiceIcon.astro';
+import QuotePanel from '../components/QuotePanel.astro';
+import { site, url } from '../data/site';
+import { homeServices } from '../data/services';
+import hero from '../assets/images/hero-crew-placeholder.svg';
+import duane from '../assets/images/about-duane-placeholder.svg';
+
+const haul = ['Furniture', 'Appliances', 'Garage Cleanouts', 'Move-Outs', 'Electronics', 'Mattresses'];
+const steps = [
+  { title: 'Send us a photo', text: 'Call, text or use the form to show us what needs to go.' },
+  { title: 'Get a free quote', text: 'You get a clear price before any work starts.' },
+  { title: 'We haul it away', text: 'We load everything up and leave the space clean.' },
+];
+---
+<Layout title="Home">
+  <section class="hero-wrap" aria-labelledby="hero-title">
+    <div class="hero wrap-wide">
+      <svg class="hero-palm" width="380" height="380" viewBox="0 0 200 200" aria-hidden="true"><path d="M100 190V90M100 90C80 60 40 55 15 70M100 90c20-30 60-35 85-20M100 90C95 55 75 30 45 20M100 90c5-35 25-60 55-70M100 90C70 80 40 95 25 120M100 90c30-10 60 5 75 30" stroke="#F4B400" stroke-width="6" fill="none" stroke-linecap="round"></path></svg>
+      <div class="hero-text">
+        <span class="pill">Junk removal in Charlotte, NC</span>
+        <h1 id="hero-title">Clear the clutter.<br /><span class="tilt-label">Keep it easy.</span></h1>
+        <p class="hero-lede">{site.tagline} Furniture, appliances and full cleanouts, handled with a laid-back island attitude and real hard work.</p>
+        <div class="btn-row">
+          <a class="btn btn-gold" href={url('/contact/')}>Get a Free Quote</a>
+          <a class="btn btn-ghost" href={`sms:${site.phoneDigits}`}>Text a Photo</a>
+        </div>
+        <ul class="checks">
+          {['Free, no-pressure quotes', 'Call or text anytime', 'Locally owned'].map((t) => (
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4B400" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>{t}</li>
+          ))}
+        </ul>
+      </div>
+      <div class="hero-photo">
+        <img src={hero.src} width="840" height="880" alt="Placeholder photo of a crew loading a couch into a truck" fetchpriority="high" />
+      </div>
+    </div>
+  </section>
+
+  <div class="haul-strip">
+    <ul aria-label="What we haul">
+      {haul.map((item, i) => (
+        <>
+          {i > 0 && <li aria-hidden="true">✦</li>}
+          <li>{item}</li>
+        </>
+      ))}
+    </ul>
+  </div>
+
+  <section class="section" aria-labelledby="services-title">
+    <div class="wrap stack">
+      <div class="section-head">
+        <div class="titles">
+          <span class="eyebrow">What we haul</span>
+          <h2 id="services-title">What we take off your hands</h2>
+        </div>
+        <a class="text-link" href={url('/services/')}>See all services →</a>
+      </div>
+      <div class="cards">
+        {homeServices.map((s) => (
+          <div class="card">
+            <ServiceIcon name={s.icon} />
+            <h3>{s.title}</h3>
+            <p>{s.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-flush" aria-labelledby="how-title">
+    <div class="how wrap-wide">
+      <h2 id="how-title">How it works</h2>
+      <ol class="steps">
+        {steps.map((s, i) => (
+          <li>
+            <span class="step-num" aria-hidden="true">{i + 1}</span>
+            <h3>{s.title}</h3>
+            <p>{s.text}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section-flush" aria-labelledby="about-title">
+    <div class="wrap about">
+      <div class="about-photo">
+        <img src={duane.src} width="760" height="760" alt="Placeholder photo of Duane with the truck" loading="lazy" />
+      </div>
+      <div class="about-text">
+        <span class="eyebrow">About Island Style</span>
+        <h2 id="about-title">From Jamaica <span>to Charlotte</span></h2>
+        <p>I'm Duane, and I'm from Jamaica. I started Island Style Junk Removal to help people in the Charlotte area stay junk free. Every job gets the same care, whether it's one old couch or a full garage.</p>
+        <a class="text-link" href={url('/about/')}>Read Duane's story →</a>
+      </div>
+    </div>
+  </section>
+
+  <QuotePanel />
+</Layout>

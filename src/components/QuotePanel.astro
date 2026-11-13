@@ -1,0 +1,26 @@
+---
+import { site } from '../data/site';
+const { id = 'quote' } = Astro.props;
+---
+<section id={id} class="quote-wrap" aria-labelledby="quote-heading">
+  <div class="quote wrap-wide">
+    <div class="quote-info">
+      <h2 id="quote-heading">Request a <span>free quote</span></h2>
+      <p class="lede">Tell us about the job and we'll reach out with a price.</p>
+      <dl class="contact-list">
+        <div><dt>Call or text</dt><dd><a href={`tel:${site.phoneDigits}`}>{site.phone}</a></dd></div>
+        <div><dt>Email</dt><dd>{site.email}</dd></div>
+        <div><dt>Hours</dt><dd>{site.hours}</dd></div>
+      </dl>
+    </div>
+    <form class="quote-form" action={site.formEndpoint} method="POST">
+      <label class="field">Name<input type="text" name="name" autocomplete="name" required /></label>
+      <label class="field">Phone<input type="tel" name="phone" autocomplete="tel" required /></label>
+      <label class="field">Email<input type="email" name="email" autocomplete="email" /></label>
+      <label class="field">Zip code<input type="text" name="zip" inputmode="numeric" autocomplete="postal-code" /></label>
+      <label class="field full">What needs to go?<textarea name="message" rows="4" required></textarea></label>
+      <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <button type="submit" class="btn btn-gold">Send Request</button>
+    </form>
+  </div>
+</section>
