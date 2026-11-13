@@ -33,7 +33,7 @@ Reference file: `reference/design-modern-pop.html`. Match its look. It uses a ca
 - Name: "Island Style Junk Removal"
 - Tagline idea: "If we can move it, we'll haul it."
 - Pricing: "Contact for a free quote". No prices on the site.
-- Hours: "Call anytime"
+- Hours: "Calls 7am to 7pm"
 - Use placeholders `[PHONE NUMBER]` and `[EMAIL]` until Duane approves the site. Keep them in one config file so they change in one place.
 - Do NOT claim licensed, insured, reviews, star ratings, years in business, or jobs completed. The business is new and none of that exists yet.
 - Stock photos for now, swapped for real photos later. Keep images in one folder with clear names.

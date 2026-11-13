@@ -9,7 +9,7 @@ export const site = {
   phoneDigits: '0000000000',
   email: 'islandstlzcleaning@gmail.com',
   owner: 'Duane Douglas',
-  hours: 'Call anytime',
+  hours: 'Calls 7am to 7pm',
   city: 'Charlotte',
   state: 'NC',
   // Placeholder. Replace with the Formspree or Web3Forms endpoint once the account exists.
